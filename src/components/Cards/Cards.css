@@ -1,0 +1,51 @@
+.cards {
+   margin-top: 20px;
+
+   width: calc(100%);
+   height: calc(100vh - 235px);
+
+   padding: 20px;
+
+   display: grid;
+   grid-template-columns: 260px 260px 260px;
+   gap: 50px;
+   justify-content: space-evenly;
+
+   background: url('https://img.icons8.com/isometric-line/70/000000/movies-folder.png');
+   background-size: 70px;
+}
+
+.card {
+   display: flex;
+   align-items: center;
+   flex-direction: column-reverse;
+
+   background-color: transparent;
+
+   color: white;
+
+   height: 460px;
+   width: 100%;
+   
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+
+.title,
+.year,
+.type {
+   height: 25px;
+
+   font-weight: 650;
+}
+
+.title {
+   height: 25px;
+}
+
+.poster {
+   width: 260px;
+   height: 100%;
+
+   border-radius: 15px;
+}

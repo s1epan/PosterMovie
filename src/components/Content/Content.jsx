@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Cards from "../Cards/Cards";
 import "./Content.css";
 
 function Content(props) {
@@ -11,9 +12,7 @@ function Content(props) {
 
   return (
     <div className="content">
-      {movie.map((el) => (
-        <div>{el.Title}</div>
-      ))}
+      <Cards movies={movie} />
     </div>
   );
 }
