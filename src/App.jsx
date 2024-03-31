@@ -7,18 +7,18 @@ import { useEffect } from "react";
 import axios from "axios";
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios({
-      url: "https://www.omdbapi.com/?t=iron&apikey=e9895de2",
-    }).then((res) => setData(res.data));
-  }, []);
+      url: "https://www.omdbapi.com/?s=iron&apikey=e9895de2",
+    }).then((res) => setData(res.data.Search));
+  });
 
   return (
     <>
       <Header />
-      <Content />
+      <Content movies={data} />
       <Footer />
     </>
   );
