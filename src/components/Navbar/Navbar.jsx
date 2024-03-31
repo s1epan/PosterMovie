@@ -8,10 +8,10 @@ function Navbar() {
       </a>
       <ul>
         <li className="active">
-          <a href="/API" className="links-one">
+          <a href="/" className="links-one">
             API
           </a>
-          <a href="/about" className="links-two">
+          <a href="/" className="links-two">
             About
           </a>
         </li>
