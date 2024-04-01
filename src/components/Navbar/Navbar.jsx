@@ -8,10 +8,14 @@ function Navbar() {
       </a>
       <ul>
         <li className="active">
-          <a href="/" className="links-one">
+          <a
+            href="https://www.omdbapi.com/"
+            target="_blank"
+            className="links-one"
+          >
             API
           </a>
-          <a href="/" className="links-two">
+          <a href="/about" className="links-two">
             About
           </a>
         </li>

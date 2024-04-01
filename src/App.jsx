@@ -5,6 +5,8 @@ import Content from "./components/Content/Content";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,6 +26,9 @@ function App() {
   return (
     <>
       <Header />
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Content movies={data} func={handleMovies} />
       <Footer />
     </>
