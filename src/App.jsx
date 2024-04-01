@@ -9,16 +9,22 @@ import axios from "axios";
 function App() {
   const [data, setData] = useState([]);
 
+  const handleMovies = (str) => {
+    axios({
+      url: `https://www.omdbapi.com/?s=${str}&apikey=e9895de2`,
+    }).then((res) => setData(res.data.Search));
+  };
+
   useEffect(() => {
     axios({
-      url: "https://www.omdbapi.com/?s=iron&apikey=e9895de2",
+      url: `https://www.omdbapi.com/?s=iron&apikey=e9895de2`,
     }).then((res) => setData(res.data.Search));
-  });
+  }, []);
 
   return (
     <>
       <Header />
-      <Content movies={data} />
+      <Content movies={data} func={handleMovies} />
       <Footer />
     </>
   );

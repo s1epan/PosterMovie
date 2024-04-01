@@ -1,10 +1,10 @@
 .cards {
    margin-top: 20px;
 
-   width: calc(100%);
-   height: calc(100vh - 235px);
+   width: calc(100% - 40px);
+   height: calc(100vh - 275px);
 
-   padding: 20px;
+   padding: 25px 20px 20px 20px;
 
    display: grid;
    grid-template-columns: 260px 260px 260px;
@@ -13,6 +13,8 @@
 
    background: url('https://img.icons8.com/isometric-line/70/000000/movies-folder.png');
    background-size: 70px;
+
+   scrollbar-width: none;
 }
 
 .card {
@@ -29,6 +31,13 @@
    
    overflow-x: hidden;
    overflow-y: hidden;
+
+   transition: all .3s;
+}
+
+.card:hover {
+   transform: scale(1.1);
+   cursor: pointer;
 }
 
 .title,
