@@ -12,14 +12,27 @@ function Cards(props) {
 
   return (
     <div className="cards">
-      {movie.map((el) => (
-        <div className="card">
-          <div className="title">{el.Title}</div>
-          <div className="year">{el.Year}</div>
-          <div className="type">{el.Type}</div>
-          <img src={el.Poster} alt="" height={300} className="poster" />
-        </div>
-      ))}
+      {movie ? (
+        movie.map((el) => (
+          <div className="card" key={el.imdbID}>
+            <div className="title">{el.Title}</div>
+            <div className="year">{el.Year}</div>
+            <div className="type">{el.Type}</div>
+            <img
+              src={
+                el.Poster
+                  ? el.Poster
+                  : "https://img.icons8.com/ios/50/movie-projector.png"
+              }
+              alt=""
+              height={300}
+              className="poster"
+            />
+          </div>
+        ))
+      ) : (
+        <div className="nth-fnd-text">Nothing found</div>
+      )}
     </div>
   );
 }

@@ -8,6 +8,7 @@
 
    display: grid;
    grid-template-columns: 260px 260px 260px;
+   flex-direction: row;
    gap: 50px;
    justify-content: space-evenly;
 
@@ -57,4 +58,35 @@
    height: 100%;
 
    border-radius: 15px;
+}
+
+.nth-fnd-text {
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   color: white;
+   font-weight: 600;
+
+   animation: transition 5s alternate infinite;
+}
+
+@keyframes transition {
+   0% {
+      opacity: 0;
+   }
+   25% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }
